@@ -1,0 +1,21 @@
+<div>
+  <h1>Chat</h1>
+
+  <div>
+      <div>
+          <form (ngSubmit)="procesarMensaje()">
+            <label for="txtDestino">Destinatario: </label>
+            <input type="text" id="txtDestino" name="destino" [(ngModel)]="mensaje.destino">
+            <label for="txtCuerpo">Mensaje: </label>
+            <input type="text" id="txtCuerpo" name="cuerpo" [(ngModel)]="mensaje.cuerpo">
+            <button type="submit">Enviar</button>
+          </form>
+      </div>
+      <div>
+        <ul>
+          <li *ngFor="let msj of historial">{{msj}}</li>
+        </ul>
+      </div>
+  </div>
+
+</div>
